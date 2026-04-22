@@ -17,7 +17,7 @@ export async function getImagesByQuery(query, page = 1) {
     },
   });
 
-  data.total_pages = Math.floor(data.totalHits / perPage);
+  data.total_pages = Math.ceil(data.totalHits / perPage);
 
   return data;
 }
