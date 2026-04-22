@@ -3,6 +3,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const gallery = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
+const btnLoadMore = document.querySelector('.btn-load-more');
 
 const simpleLightbox = new SimpleLightbox('.gallery-item a', {
   captionDelay: 1000,
@@ -36,4 +37,12 @@ export function showLoader() {
 }
 export function hideLoader() {
   loader.classList.add('is-hidden');
+}
+
+export function showLoadMoreButton() {
+  btnLoadMore.classList.remove('is-hidden');
+}
+
+export function hideLoadMoreButton() {
+  btnLoadMore.classList.add('is-hidden');
 }

@@ -1,3 +1,13 @@
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1440px;
+  }
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -8,11 +18,23 @@
 
 .gallery {
   display: flex;
-  gap: 24px;
+  gap: 24px 12px;
+
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1440px;
-  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.gallery-item {
+  width: 100%;
+  border: 1px solid #808080;
+
+  @media screen and (min-width: 1024px) {
+    width: calc((100% - 12px * 2) / 3);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: calc((100% - 12px * 4) / 5);
+  }
 }
 
 .gallery-thumb {
@@ -28,30 +50,11 @@
   object-position: center;
 }
 
-.gallery-item {
-  /* width: calc((100% - 24px * 3) / 4); */
-  width: 100%;
-  max-width: 640px;
-  border: 1px solid #808080;
-
-  @media screen and (min-width: 768px) {
-    width: calc((100% - 24px * 1) / 2);
-  }
-
-  @media screen and (min-width: 1024px) {
-    width: calc((100% - 24px * 2) / 3);
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: calc((100% - 24px * 3) / 4);
-  }
-}
-
 .gallery-content-list {
   padding: 4px 20px;
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
 }
 
 .gallery-content-item {
@@ -63,10 +66,19 @@
   font-size: 12px;
   line-height: 1.33333;
   letter-spacing: 0.04em;
-  color: #2e2f42;
+  color: #dbdbdb;
 }
 
 .gallery-content-item span:last-child {
   font-weight: 400;
   line-height: 2;
+}
+
+.btn-load-more {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-load-more.is-hidden {
+  display: none;
 }

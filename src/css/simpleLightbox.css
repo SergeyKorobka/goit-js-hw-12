@@ -1,0 +1,13 @@
+.sl-overlay {
+  background: #222222 !important;
+}
+
+.sl-wrapper .sl-navigation button,
+.sl-wrapper .sl-counter,
+.sl-wrapper .sl-close {
+  color: #dbdbdb !important;
+}
+
+.sl-spinner {
+  border-color: #dbdbdb !important;
+}
