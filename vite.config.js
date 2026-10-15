@@ -7,16 +7,13 @@ import { resolve } from 'node:path';
 const projectRoot = fileURLToPath(new URL('.', import.meta.url));
 const sourceRoot = resolve(projectRoot, 'src');
 
-export default defineConfig(({ command }) => {
+export default defineConfig(() => {
   return {
     // base для GitHub Pages береться з назви репозиторію під час деплою;
     // локально (без GITHUB_REPOSITORY) — '/'
     base: process.env.GITHUB_REPOSITORY
       ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/`
       : '/',
-    define: {
-      [command === 'serve' ? 'global' : '_global']: {},
-    },
     root: sourceRoot,
     build: {
       sourcemap: true,

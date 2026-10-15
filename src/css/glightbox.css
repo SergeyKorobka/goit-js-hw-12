@@ -1,0 +1,14 @@
+.goverlay {
+  background: #222222 !important;
+}
+
+.glightbox-clean .gclose path,
+.glightbox-clean .gnext path,
+.glightbox-clean .gprev path {
+  fill: #dbdbdb !important;
+}
+
+.gloader {
+  border-color: #dbdbdb !important;
+  border-right-color: transparent !important;
+}
