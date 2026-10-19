@@ -12,7 +12,6 @@ import {
 } from './js/render-functions';
 
 const form = document.querySelector('.form');
-const gallery = document.querySelector('.gallery');
 const btnLoadMore = document.querySelector('.btn-load-more');
 
 let searchQuery = '';
@@ -77,12 +76,11 @@ async function fetchAndRenderGallery() {
 }
 
 function scrollAfterClickLoadMore() {
-  const item = gallery.querySelector('.gallery-itema');
-  const gap = parseInt(getComputedStyle(gallery).rowGap);
+  const item = document.querySelector('.gallery-item');
   const heightEl = item?.getBoundingClientRect().height ?? 0;
 
   scrollBy({
-    top: Math.round((heightEl + gap) * 2),
+    top: Math.round(heightEl * 2),
     behavior: 'smooth',
   });
 }

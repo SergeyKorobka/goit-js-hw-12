@@ -14,7 +14,7 @@ export function createGallery(images) {
     .map(
       image => `
           <li class="gallery-item">
-          <a class="gallery-thumb" href="${image.largeImageURL}" data-title="${image.tags}"><img class="gallery-img" src="${image.webformatURL}" alt="${image.name || image.tags}" /></a>
+          <a class="gallery-thumb" href="${image.largeImageURL}" data-title="${image.name || image.tags}"><img class="gallery-img" src="${image.webformatURL}" alt="${image.name || image.tags}" /></a>
           <ul class="gallery-content-list">
             <li class="gallery-content-item"><span>Likes</span><span>${image.likes}</span></li>
             <li class="gallery-content-item"><span>Views</span><span>${image.views}</span></li>
